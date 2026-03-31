@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadre Admin — Gestion des courts d'animation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Cadre Admin</h1>
+        <p>Interface de gestion des courts métrages d'animation et de leurs parcours en festivals.</p>
+      </div>
+      <div class="topbar-actions">
+        <button id="newFilmBtn" class="primary">+ Nouveau film</button>
+        <button id="exportBtn">Exporter JSON</button>
+        <label class="file-label">
+          Importer JSON
+          <input id="importInput" type="file" accept="application/json" />
+        </label>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel list-panel">
+        <div class="list-header">
+          <input id="searchInput" placeholder="Rechercher titre, personne, festival..." />
+          <select id="yearFilter">
+            <option value="">Toutes les années</option>
+          </select>
+          <select id="countryFilter">
+            <option value="">Tous les pays</option>
+          </select>
+        </div>
+
+        <div class="stats" id="stats"></div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Titre</th>
+              <th>Année</th>
+              <th>Pays</th>
+              <th>Festivals</th>
+            </tr>
+          </thead>
+          <tbody id="filmsTableBody"></tbody>
+        </table>
+      </section>
+
+      <section class="panel editor-panel">
+        <h2>Édition film</h2>
+        <form id="filmForm">
+          <label>Titre<input name="title" required /></label>
+          <div class="grid-two">
+            <label>Année<input name="release_year" type="number" min="1900" max="2100" /></label>
+            <label>Durée (min)<input name="duration_minutes" type="number" min="1" /></label>
+          </div>
+          <label>Pays (codes ISO séparés par virgule)<input name="country_codes" placeholder="FR, BE, CA" /></label>
+          <label>Genres (séparés par virgule)<input name="genres" placeholder="Drama, Experimental" /></label>
+          <label>Techniques (séparées par virgule)<input name="animation_techniques" placeholder="2D, Stop-motion" /></label>
+          <label>Synopsis<textarea name="synopsis" rows="3"></textarea></label>
+
+          <div class="subsection">
+            <div class="subsection-head">
+              <h3>Personnes & rôles</h3>
+              <button id="addPersonBtn" type="button">+ Ajouter</button>
+            </div>
+            <div id="peopleList"></div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-head">
+              <h3>Festivals / screenings</h3>
+              <button id="addScreeningBtn" type="button">+ Ajouter</button>
+            </div>
+            <div id="screeningsList"></div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-head">
+              <h3>Médias (trailer / film complet / autres)</h3>
+              <button id="addMediaBtn" type="button">+ Ajouter</button>
+            </div>
+            <div id="mediaList"></div>
+          </div>
+
+          <div class="editor-actions">
+            <button type="submit" class="primary">Enregistrer</button>
+            <button id="deleteFilmBtn" type="button" class="danger">Supprimer le film</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <template id="rowTemplate">
+      <div class="row-block"></div>
+    </template>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "title": "Ice Merchants",
+    "release_year": 2022,
+    "duration_minutes": 14,
+    "country_codes": ["PT", "FR", "GB"],
+    "genres": ["Drama"],
+    "animation_techniques": ["2D"],
+    "people": [
+      { "name": "João Gonzalez", "role": "director" },
+      { "name": "Bruno Caetano", "role": "producer" }
+    ],
+    "screenings": [
+      {
+        "festival": "Cannes Film Festival",
+        "edition_year": 2022,
+        "section_name": "Semaine de la Critique",
+        "award_outcome": "winner",
+        "award_name": "Leitz Cine Discovery Prize"
+      },
+      {
+        "festival": "Annecy International Animation Film Festival",
+        "edition_year": 2022,
+        "section_name": "Official Selection",
+        "award_outcome": "official_selection"
+      }
+    ],
+    "media_assets": [
+      {
+        "asset_type": "trailer",
+        "platform": "YouTube",
+        "url": "https://www.youtube.com/results?search_query=Ice+Merchants+trailer",
+        "is_public": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "The Boy, the Mole, the Fox and the Horse",
+    "release_year": 2022,
+    "duration_minutes": 32,
+    "country_codes": ["GB", "US"],
+    "genres": ["Family", "Drama"],
+    "animation_techniques": ["2D"],
+    "people": [
+      { "name": "Peter Baynton", "role": "director" },
+      { "name": "Charlie Mackesy", "role": "director" }
+    ],
+    "screenings": [
+      {
+        "festival": "Hamptons International Film Festival",
+        "edition_year": 2022,
+        "section_name": "Official Selection",
+        "award_outcome": "official_selection"
+      }
+    ],
+    "media_assets": [
+      {
+        "asset_type": "trailer",
+        "platform": "YouTube",
+        "url": "https://www.youtube.com/results?search_query=The+Boy+the+Mole+the+Fox+and+the+Horse+trailer",
+        "is_public": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "World of Tomorrow Episode Three: The Absent Destinations of David Prime",
+    "release_year": 2020,
+    "duration_minutes": 34,
+    "country_codes": ["US"],
+    "genres": ["Sci-Fi", "Experimental"],
+    "animation_techniques": ["2D", "Digital"],
+    "people": [
+      { "name": "Don Hertzfeldt", "role": "director" }
+    ],
+    "screenings": [
+      {
+        "festival": "Sundance Film Festival",
+        "edition_year": 2020,
+        "section_name": "Shorts Program",
+        "award_outcome": "official_selection"
+      }
+    ],
+    "media_assets": [
+      {
+        "asset_type": "trailer",
+        "platform": "Vimeo",
+        "url": "https://vimeo.com/search?q=world+of+tomorrow+episode+3+trailer",
+        "is_public": true
+      }
+    ]
+  }
+]
